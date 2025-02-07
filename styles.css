@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('college.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Fixes the background image */
+    color: #fff;
+    padding-top: 70px; /* Add padding to prevent content from being hidden under the fixed header */
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px; /* Adjust padding for a compact header */
+    background-color: rgba(0, 0, 0, 0.6); /* Transparent black background */
+    position: fixed; /* Fixes the header at the top of the viewport */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure header takes up full width */
+    height: auto; /* Allows the header to adjust height based on content */
+    z-index: 1000; /* Ensure header stays above other content */
+}
+
+.logo {
+    max-width: 150px;
+    height: auto;
+    display: block; /* Ensure the logo fits properly */
+}
+
+.header-text {
+    flex: 1; /* Takes up remaining space */
+    text-align: center;
+    color: #f5f5dc; /* Light cream color */
+}
+
+.college-name {
+    font-size: 24px;
+    margin: 5px 0; /* Margin above and below the heading */
+}
+
+.college-subtitle, .college-affiliation {
+    font-size: 16px;
+    margin: 5px 0; /* Margin above and below the subtitles */
+}
+
+.section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0; /* Remove padding as header is fixed */
+    position: relative;
+}
+
+.button-container {
+    display: flex;
+    gap: 20px;
+}
+
+.modern-button, .login-button, .home-button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #fff;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: #2196F3;
+}
+
+.student-button {
+    background-color: #4CAF50;
+}
+
+.modern-button:hover, .login-button:hover, .home-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+.login-form input {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    color: #333;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.create-account-link {
+    display: block;
+    margin-top: 10px;
+    color: #FFD700;
+    text-decoration: none;
+}
+
+.create-account-link:hover {
+    text-decoration: underline;
+}
+
+.home-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #FF5722;
+    display: none; /* Hidden by default */
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .logo {
+        margin-bottom: 10px; /* Space below the logo in mobile view */
+    }
+    
+    .header-text {
+        text-align: center;
+    }
+}
